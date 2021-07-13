@@ -14,7 +14,7 @@ This project is distributed "as it". You will need to either clone this reposito
 ```csharp
 var taskPool = new TaskPool(10, 100); // Create a TaskPool able to running 10 tasks at the same time and queue up to 100 other ones
 var task1 = new Task(() => Thread.Sleep(1000)); // create a bunch of tasks
-var task1 = new Task(() => Thread.Sleep(1000));
+var task2 = new Task(() => Thread.Sleep(1000));
 taskPool.Queue(task1); // queue the tasks for execution, you do not need further action
 taskPool.Queue(task2); // note that calls to .Queue() should be thread safe in any situation
 ```
